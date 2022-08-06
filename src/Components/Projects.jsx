@@ -174,7 +174,7 @@ const Projects = () => {
       <Divider marginTop="5" />
       <Grid
         templateColumns={["repeat(1, 1fr)", "repeat(1, 1fr)", "repeat(2, 1fr)"]}
-        gap={"3"}
+        gap={"2"}
       >
         <GridItem>
           <Card
