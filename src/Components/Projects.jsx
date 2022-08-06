@@ -79,7 +79,12 @@ const Projects = () => {
             marginLeft={{ base: "0", sm: "5%" }}
             marginTop="5%"
           >
-            <Link textDecoration="none" _hover={{ textDecoration: "none" }} target="_blank" href={"https://ketto-true-mine3269.netlify.app/"}>
+            <Link
+              textDecoration="none"
+              _hover={{ textDecoration: "none" }}
+              target="_blank"
+              href={"https://ketto-true-mine3269.netlify.app/"}
+            >
               <Image
                 borderRadius="lg"
                 src={"https://i.postimg.cc/J0Vt629M/p1Main.jpg"}
@@ -109,7 +114,11 @@ const Projects = () => {
         >
           <BlogTags tags={["Collaborative", "CrowdFunding"]} />
           <Heading marginTop="1">
-            <Link textDecoration="none" target="_blank" _hover={{ textDecoration: "none" }}>
+            <Link
+              textDecoration="none"
+              target="_blank"
+              _hover={{ textDecoration: "none" }}
+            >
               Ketto.org Clone Project
             </Link>
           </Heading>
@@ -163,7 +172,10 @@ const Projects = () => {
         Some Of The Other Projects
       </Heading>
       <Divider marginTop="5" />
-      <Grid templateColumns={["repeat(1, 1fr)", "repeat(2, 1fr)"]}>
+      <Grid
+        templateColumns={["repeat(1, 1fr)", "repeat(1, 1fr)", "repeat(2, 1fr)"]}
+        gap={"3"}
+      >
         <GridItem>
           <Card
             img={"https://i.postimg.cc/9fMV0ZkH/mf.jpg"}
