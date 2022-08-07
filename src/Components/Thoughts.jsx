@@ -45,6 +45,7 @@ export default function Thoughts() {
             >
               <Link
                 _hover={{ textDecoration: "none" }}
+                target={"_blank"}
                 href="https://medium.com/@jaisprajwal.1999"
               >
                 Read my blogs

@@ -150,7 +150,7 @@ export default function Testimonials() {
           fontWeight={"bold"}
           color={useColorModeValue("gray.700", "gray.50")}
         >
-          You can count on me
+          Little Bragging Is Fine
         </chakra.h1>
         <chakra.h2
           margin={"auto"}

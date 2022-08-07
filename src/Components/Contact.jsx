@@ -119,7 +119,7 @@ export default function Contact() {
                   />
                 </Tooltip>
 
-                <Link href="https://github.com/J-Prajwal">
+                <Link target="_blank" href="https://github.com/J-Prajwal">
                   <IconButton
                     aria-label="github"
                     variant="ghost"
@@ -134,7 +134,7 @@ export default function Contact() {
                   />
                 </Link>
 
-                <Link href="https://twitter.com/Prajwal_jais">
+                <Link target="_blank" href="https://twitter.com/Prajwal_jais">
                   <IconButton
                     aria-label="twitter"
                     variant="ghost"
@@ -148,7 +148,7 @@ export default function Contact() {
                   />
                 </Link>
 
-                <Link href="https://www.linkedin.com/in/prajwal-jaiswal-3772aa215/">
+                <Link target="_blank" href="https://www.linkedin.com/in/prajwal-jaiswal-3772aa215/">
                   <IconButton
                     aria-label="linkedin"
                     variant="ghost"

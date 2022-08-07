@@ -129,10 +129,25 @@ export default function Navbar() {
                 />
               </MenuButton>
               <MenuList>
-                <MenuItem>Linkedin</MenuItem>
-                <MenuItem>Twitter</MenuItem>
+                <MenuItem>
+                  <a
+                    target="_blank"
+                    href="https://www.linkedin.com/in/prajwal-jaiswal-3772aa215/"
+                  >
+                    Linkedin
+                  </a>
+                </MenuItem>
+                <MenuItem>
+                  <a target="_blank" href="https://twitter.com/Prajwal_jais">
+                    Twitter
+                  </a>
+                </MenuItem>
                 <MenuDivider />
-                <MenuItem>Github</MenuItem>
+                <MenuItem>
+                  <a target="_blank" href="https://github.com/J-Prajwal">
+                    Github
+                  </a>
+                </MenuItem>
               </MenuList>
             </Menu>
           </Flex>

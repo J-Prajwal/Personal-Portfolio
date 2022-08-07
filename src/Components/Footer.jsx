@@ -2,13 +2,16 @@ import {
   Box,
   chakra,
   Container,
+  Heading,
+  Button,
   Stack,
   Text,
   useColorModeValue,
   VisuallyHidden,
+  Link,
 } from "@chakra-ui/react";
-import { FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
-import { ReactNode } from "react";
+import { PhoneIcon } from "@chakra-ui/icons";
+import { GoMail } from "react-icons/go";
 
 const SocialButton = ({ children, label, href }) => {
   return (
@@ -51,15 +54,14 @@ export default function Footer() {
       >
         <Text>© 2022 Prajwal Jaiswal. All rights reserved</Text>
         <Stack direction={"row"} spacing={6}>
-          <SocialButton label={"Twitter"} href={"https://twitter.com/Prajwal_jais"}>
-            <FaTwitter />
+          <SocialButton label={"Phone"} href={"#"}>
+            <PhoneIcon />
           </SocialButton>
-          <SocialButton label={"YouTube"} href={"https://www.youtube.com/channel/UCZ-08gmoDn6UWK5v6F1TW5Q"}>
-            <FaYoutube />
+          <Text>+91-86015-58001</Text>
+          <SocialButton label={"Instagram"} href={"#"}>
+            <GoMail />
           </SocialButton>
-          <SocialButton label={"Instagram"} href={"https://www.instagram.com/the_defamed_achiever/"}>
-            <FaInstagram />
-          </SocialButton>
+          <Text> <a href="mailto:jaisprajwal.1999@gmail.com">jaisprajwal.1999@gmail.com</a> </Text>
         </Stack>
       </Container>
     </Box>
