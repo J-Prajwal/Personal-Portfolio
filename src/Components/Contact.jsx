@@ -148,7 +148,10 @@ export default function Contact() {
                   />
                 </Link>
 
-                <Link target="_blank" href="https://www.linkedin.com/in/prajwal-jaiswal-3772aa215/">
+                <Link
+                  target="_blank"
+                  href="https://www.linkedin.com/in/prajwal-jaiswal-3772aa215/"
+                >
                   <IconButton
                     aria-label="linkedin"
                     variant="ghost"
