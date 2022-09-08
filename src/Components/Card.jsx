@@ -17,7 +17,7 @@ import { BsGithub, BsLink45Deg } from "react-icons/bs";
 
 const BlogTags = (props) => {
   return (
-    <HStack spacing={2} marginTop={props.marginTop}>
+    <Flex flexWrap={"wrap"} gap={2} spacing={2} marginTop={props.marginTop}>
       {props.tags.map((tag) => {
         return (
           <Tag
@@ -31,7 +31,7 @@ const BlogTags = (props) => {
           </Tag>
         );
       })}
-    </HStack>
+    </Flex>
   );
 };
 
@@ -55,12 +55,21 @@ const TechStackTags = (props) => {
   );
 };
 
-export default function Card({ img, tag, heading, content, deploy, git, tsTags }) {
+export default function Card({
+  img,
+  tag,
+  heading,
+  content,
+  deploy,
+  git,
+  tsTags,
+}) {
   return (
     <Center py={6}>
       <Box
         maxW={"445px"}
         w={"full"}
+        h={"xl"}
         bg={useColorModeValue("white", "gray.900")}
         boxShadow={"2xl"}
         rounded={"md"}
@@ -68,7 +77,7 @@ export default function Card({ img, tag, heading, content, deploy, git, tsTags }
         overflow={"hidden"}
       >
         <Box
-          h={"210px"}
+          h={["160px", "210px"]}
           bg={"gray.100"}
           mt={-6}
           mx={-6}
@@ -90,26 +99,38 @@ export default function Card({ img, tag, heading, content, deploy, git, tsTags }
           <Text color={"gray.500"}>{content}</Text>
         </Stack>
         <Stack direction={"row"} pt={5}>
-        <Button
-          bg={"blue.400"}
-          size={"sm"}
-          rounded={"full"}
-          color={"white"}
-          _hover={{ bg: "blue.500" }}
-          rightIcon={<BsGithub />}
-        >
-          <Link _hover={{textDecoration: "none"}} target={"_blank"} href={git}>Github</Link>
-        </Button>
-        <Button
-          bg={"whiteAlpha.300"}
-          size={"sm"}
-          rounded={"full"}
-          _hover={{ bg: "whiteAlpha.500" }}
-          rightIcon={<BsLink45Deg />}
-        >
-          <Link _hover={{textDecoration: "none"}} target={"_blank"} href={deploy}>Deployment</Link>
-        </Button>
-      </Stack>
+          <Button
+            bg={"blue.400"}
+            size={"sm"}
+            rounded={"full"}
+            color={"white"}
+            _hover={{ bg: "blue.500" }}
+            rightIcon={<BsGithub />}
+          >
+            <Link
+              _hover={{ textDecoration: "none" }}
+              target={"_blank"}
+              href={git}
+            >
+              Github
+            </Link>
+          </Button>
+          <Button
+            bg={"whiteAlpha.300"}
+            size={"sm"}
+            rounded={"full"}
+            _hover={{ bg: "whiteAlpha.500" }}
+            rightIcon={<BsLink45Deg />}
+          >
+            <Link
+              _hover={{ textDecoration: "none" }}
+              target={"_blank"}
+              href={deploy}
+            >
+              Deployment
+            </Link>
+          </Button>
+        </Stack>
       </Box>
     </Center>
   );

@@ -104,11 +104,13 @@ const Projects = () => {
               textDecoration="none"
               _hover={{ textDecoration: "none" }}
               target="_blank"
-              href={"https://ketto-true-mine3269.netlify.app/"}
+              href={"https://classy-druid-0cbd3c.netlify.app/"}
             >
               <Image
                 borderRadius="lg"
-                src={"https://i.postimg.cc/J0Vt629M/p1Main.jpg"}
+                src={
+                  "https://i.postimg.cc/MThSq0H8/Annotation-2022-09-08-203636.jpg"
+                }
                 alt="some good alt text"
                 objectFit="contain"
               />
@@ -133,16 +135,29 @@ const Projects = () => {
           justifyContent="center"
           marginTop={{ base: "3", sm: "0" }}
         >
-          <BlogTags tags={["Collaborative", "CrowdFunding"]} />
+          <BlogTags tags={["Collaborative", "Hackathon"]} />
           <br />
-          <TechStackTags tags={["React", "Redux", "Chakra-Ui", "JSON-Server", "Axios", "React-Slider" ]} />
-          <Heading marginTop="1">
+          <TechStackTags
+            tags={[
+              "React",
+              "Redux",
+              "Chakra-Ui",
+              "Axios",
+              "NodeJs",
+              "Express",
+              "MongoDB",
+              "Mongoose",
+              "Slack-Bot",
+              "Slack-API",
+            ]}
+          />
+          <Heading size={"lg"} marginTop="1">
             <Link
               textDecoration="none"
               target="_blank"
               _hover={{ textDecoration: "none" }}
             >
-              Ketto.org Clone Project
+              Buzzy - Speak & Compete on slack workspaces
             </Link>
           </Heading>
           <Text
@@ -151,11 +166,12 @@ const Projects = () => {
             color={useColorModeValue("gray.700", "gray.200")}
             fontSize="lg"
           >
-            It's a collaborative project clone of India's most trusted
-            Crowd-Funding platform "ketto.org", which took us a time lapse of 5
-            days to build it completely and provide most of it's functionality.
+            A three membered collaborative project made withing <strong>48 hours</strong> with
+            the problem statement of improving communication among your peers.
+            Now the student can speak and by converting their voices in text,
+            It'll be posted on slack workspaces with weekly leaderboards.
           </Text>
-          <BlogAuthor name="Prajwal Jaiswal" date={new Date("2022-04-07")} />
+          <BlogAuthor name="Prajwal Jaiswal" date={new Date("2022-01-08")} />
           <Stack direction={"row"} pt={5}>
             <Button
               bg={"blue.400"}
@@ -203,7 +219,7 @@ const Projects = () => {
           <Card
             img={"https://i.postimg.cc/9fMV0ZkH/mf.jpg"}
             tag={["Collaborative", "E-Commerce"]}
-            tsTags = {["HTML", "CSS", "JavaScript", "ES-6", "LocalStorage"]}
+            tsTags={["HTML", "CSS", "JavaScript", "ES-6", "LocalStorage"]}
             heading={"Max Fashion Clone"}
             content={
               "This is a clone of Max Fashion with it's simple and eye-cathcing UI."
@@ -214,20 +230,31 @@ const Projects = () => {
         </GridItem>
         <GridItem>
           <Card
-            img={"https://i.postimg.cc/tg2Tm9Kp/cr.jpg"}
-            tag={["Collaborative", "E-Commerce"]}
-            tsTags = {["HTML", "CSS", "JavaScript", "ES-6", "LocalStorage"]}
-            heading={"Croma Clone"}
-            content={"My first Collaborative which demanded ultimate struggle."}
-            deploy={"https://stellar-crisp-f229d2.netlify.app/"}
-            git={"https://github.com/J-Prajwal/croma.com-clone"}
+            img={
+              "https://i.postimg.cc/261j78M2/Annotation-2022-09-08-202931.jpg"
+            }
+            tag={["Collaborative", "Crowd-Funding"]}
+            tsTags={[
+              "React-Js",
+              "Redux",
+              "Chakra-Ui",
+              "Axios",
+              "JSON-Server",
+              "React-Slider",
+            ]}
+            heading={"Ketto India Clone"}
+            content={
+              "A clone of India's most trusted Crowd-Funding platform ketto.org"
+            }
+            deploy={"https://ketto-true-mine3269.netlify.app/"}
+            git={"https://github.com/J-Prajwal/ketto-cw--true-mine-3269"}
           />
         </GridItem>
         <GridItem>
           <Card
             img={"https://i.postimg.cc/RhfJYj1d/ie.jpg"}
             tag={["Collaborative", "News"]}
-            tsTags = {["React", "CSS", "REST-API"]}
+            tsTags={["React", "CSS", "REST-API"]}
             heading={"Indian Express Clone"}
             content={
               "First collaborative project on React-Js, which came with a lot of challenges."
@@ -240,7 +267,7 @@ const Projects = () => {
           <Card
             img={"https://i.postimg.cc/Rhcqdw9b/mb.jpg"}
             tag={["Solo", "E-Commerce"]}
-            tsTags = {["HTML", "CSS", "JavaScript", "ES-6"]}
+            tsTags={["HTML", "CSS", "JavaScript", "ES-6"]}
             heading={"Movie Booking Application"}
             content={
               "Simple yet one of the Solo project that has a lot of logics included."
