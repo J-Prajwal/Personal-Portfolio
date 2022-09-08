@@ -54,7 +54,7 @@ export default function About() {
             >
               <Link
                 style={{ textDecoration: "none" }}
-                href="https://drive.google.com/file/d/1-eS-MlP2JrNKOuT6553hTQEBaQswsktO/view?usp=sharing"
+                href="https://drive.google.com/drive/folders/1-TBHBQjmB1ygTTIPgF7I3PNFT8g0qtxX?usp=sharing"
                 target={"_blank"}
               >
                 My Resume

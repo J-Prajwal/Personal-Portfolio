@@ -14,7 +14,7 @@ function App() {
     event.preventDefault();
   });
   return (
-    <div>
+    <>
       <Navbar />
       <About />
       <Thoughts />
@@ -24,7 +24,7 @@ function App() {
       <Testimonials />
       <Contact />
       <Footer />
-    </div>
+    </>
   );
 }
 

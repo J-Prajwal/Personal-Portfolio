@@ -13,7 +13,7 @@ export default function Thoughts() {
   return (
     <Flex
       w={"full"}
-      h={"50vh"}
+      h={"35vh"}
       backgroundImage={
         "url(https://images.unsplash.com/photo-1478432780021-b8d273730d8c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80)"
       }
@@ -31,7 +31,7 @@ export default function Thoughts() {
             color={"white"}
             fontWeight={700}
             lineHeight={1.2}
-            fontSize={useBreakpointValue({ base: "3xl", md: "4xl" })}
+            fontSize={useBreakpointValue({ base: "2xl", md: "4xl" })}
           >
             "Experience is the name, Everyone gives to their mistakes. And I've
             already done a lot of it."
@@ -39,6 +39,7 @@ export default function Thoughts() {
           <Stack direction={"row"}>
             <Button
               bg={"blue.400"}
+              size={["sm", "md"]}
               rounded={"full"}
               color={"white"}
               _hover={{ bg: "blue.500" }}
@@ -53,6 +54,7 @@ export default function Thoughts() {
             </Button>
             <Button
               bg={"whiteAlpha.300"}
+              size={["sm", "md"]}
               rounded={"full"}
               color={"white"}
               _hover={{ bg: "whiteAlpha.500" }}
