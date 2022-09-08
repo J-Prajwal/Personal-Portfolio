@@ -164,7 +164,7 @@ const Projects = () => {
             as="p"
             marginTop="2"
             color={useColorModeValue("gray.700", "gray.200")}
-            fontSize="lg"
+            fontSize="md"
           >
             A three membered collaborative project made withing <strong>48 hours</strong> with
             the problem statement of improving communication among your peers.
@@ -199,7 +199,7 @@ const Projects = () => {
               <Link
                 _hover={{ textDecoration: "none" }}
                 target="_blank"
-                href={"https://ketto-true-mine3269.netlify.app/"}
+                href={"https://classy-druid-0cbd3c.netlify.app/"}
               >
                 Deployment
               </Link>
