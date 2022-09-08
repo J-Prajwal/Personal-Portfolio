@@ -11,6 +11,7 @@ import {
   Tag,
   Button,
   Link,
+  Flex,
 } from "@chakra-ui/react";
 import { BsGithub, BsLink45Deg } from "react-icons/bs";
 
@@ -34,7 +35,27 @@ const BlogTags = (props) => {
   );
 };
 
-export default function Card({ img, tag, heading, content, deploy, git }) {
+const TechStackTags = (props) => {
+  return (
+    <Flex flexWrap={"wrap"} gap={2} marginTop={props.marginTop}>
+      {props.tags.map((tag) => {
+        return (
+          <Tag
+            size={"md"}
+            variant="solid"
+            colorScheme="teal"
+            _hover={{ bgColor: "teal.400" }}
+            key={tag}
+          >
+            {tag}
+          </Tag>
+        );
+      })}
+    </Flex>
+  );
+};
+
+export default function Card({ img, tag, heading, content, deploy, git, tsTags }) {
   return (
     <Center py={6}>
       <Box
@@ -58,6 +79,7 @@ export default function Card({ img, tag, heading, content, deploy, git }) {
         </Box>
         <Stack pt={[1, 20]}>
           <BlogTags tags={tag} />
+          <TechStackTags tags={tsTags} />
           <Heading
             color={useColorModeValue("gray.700", "white")}
             fontSize={"2xl"}
@@ -76,7 +98,7 @@ export default function Card({ img, tag, heading, content, deploy, git }) {
           _hover={{ bg: "blue.500" }}
           rightIcon={<BsGithub />}
         >
-          <Link _hover={{textDecoration: "none"}} href={git}>Github</Link>
+          <Link _hover={{textDecoration: "none"}} target={"_blank"} href={git}>Github</Link>
         </Button>
         <Button
           bg={"whiteAlpha.300"}
@@ -85,7 +107,7 @@ export default function Card({ img, tag, heading, content, deploy, git }) {
           _hover={{ bg: "whiteAlpha.500" }}
           rightIcon={<BsLink45Deg />}
         >
-          <Link _hover={{textDecoration: "none"}} href={deploy}>Deployment</Link>
+          <Link _hover={{textDecoration: "none"}} target={"_blank"} href={deploy}>Deployment</Link>
         </Button>
       </Stack>
       </Box>

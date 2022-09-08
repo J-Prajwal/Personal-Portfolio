@@ -9,6 +9,7 @@ import {
   useBreakpointValue,
 } from "@chakra-ui/react";
 import { BsLinkedin, BsGithub, BsTwitter } from "react-icons/bs";
+import { motion } from "framer-motion"; 
 
 export default function About() {
   return (
@@ -32,10 +33,10 @@ export default function About() {
             >
               Hi, I Am
             </Text>
-            <br />{" "}
+            <br />
             <Text color={"blue.400"} as={"span"}>
               PRAJWAL JAISWAL
-            </Text>{" "}
+            </Text>
           </Heading>
           <Text fontSize={{ base: "md", lg: "lg" }} color={"gray.500"}>
             A passionate full-stack web developer, who loves to buid cool
@@ -62,7 +63,8 @@ export default function About() {
             <Button rounded={"full"}>
               <Link
                 style={{ textDecoration: "none" }}
-                href="#projects"
+                target={"_blank"}
+                href="https://github.com/J-Prajwal?tab=repositories"
               >
                 My Projects
               </Link>

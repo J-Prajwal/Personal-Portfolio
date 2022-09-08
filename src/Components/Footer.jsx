@@ -9,6 +9,7 @@ import {
   useColorModeValue,
   VisuallyHidden,
   Link,
+  useColorMode,
 } from "@chakra-ui/react";
 import { PhoneIcon } from "@chakra-ui/icons";
 import { GoMail } from "react-icons/go";
@@ -38,6 +39,7 @@ const SocialButton = ({ children, label, href }) => {
 };
 
 export default function Footer() {
+  const { colorMode, toggleColorMode } = useColorMode();
   return (
     <Box
       bg={useColorModeValue("gray.50", "gray.900")}
@@ -53,16 +55,26 @@ export default function Footer() {
         align={{ base: "center", md: "center" }}
       >
         <Text>© 2022 Prajwal Jaiswal. All rights reserved</Text>
-        <Stack direction={"row"} spacing={6}>
-          <SocialButton label={"Phone"} href={"#"}>
-            <PhoneIcon />
-          </SocialButton>
-          <Text>+91-86015-58001</Text>
-          <SocialButton label={"Instagram"} href={"#"}>
-            <GoMail />
-          </SocialButton>
-          <Text> <a href="mailto:jaisprajwal.1999@gmail.com">jaisprajwal.1999@gmail.com</a> </Text>
-        </Stack>
+        <Box>
+          <Button
+            size={["sm", "md"]}
+            colorScheme="none"
+            color={colorMode == "light" ? "black" : "white"}
+            leftIcon={<PhoneIcon />}
+          >
+            +91-86015-58001
+          </Button>
+          <Button
+            size={["sm", "md"]}
+            colorScheme="none"
+            color={colorMode == "light" ? "black" : "white"}
+            leftIcon={<GoMail />}
+          >
+            <a href="mailto:jaisprajwal.1999@gmail.com">
+              jaisprajwal.1999@gmail.com
+            </a>
+          </Button>
+        </Box>
       </Container>
     </Box>
   );

@@ -14,6 +14,7 @@ import {
   GridItem,
   Stack,
   Button,
+  Flex,
 } from "@chakra-ui/react";
 import Card from "./Card";
 import { BsGithub, BsLink45Deg } from "react-icons/bs";
@@ -35,6 +36,26 @@ const BlogTags = (props) => {
         );
       })}
     </HStack>
+  );
+};
+
+const TechStackTags = (props) => {
+  return (
+    <Flex flexWrap={"wrap"} gap={2} marginTop={props.marginTop}>
+      {props.tags.map((tag) => {
+        return (
+          <Tag
+            size={"md"}
+            variant="solid"
+            colorScheme="teal"
+            _hover={{ bgColor: "teal.400" }}
+            key={tag}
+          >
+            {tag}
+          </Tag>
+        );
+      })}
+    </Flex>
   );
 };
 
@@ -113,6 +134,8 @@ const Projects = () => {
           marginTop={{ base: "3", sm: "0" }}
         >
           <BlogTags tags={["Collaborative", "CrowdFunding"]} />
+          <br />
+          <TechStackTags tags={["React", "Redux", "Chakra-Ui", "JSON-Server", "Axios", "React-Slider" ]} />
           <Heading marginTop="1">
             <Link
               textDecoration="none"
@@ -180,6 +203,7 @@ const Projects = () => {
           <Card
             img={"https://i.postimg.cc/9fMV0ZkH/mf.jpg"}
             tag={["Collaborative", "E-Commerce"]}
+            tsTags = {["HTML", "CSS", "JavaScript", "ES-6", "LocalStorage"]}
             heading={"Max Fashion Clone"}
             content={
               "This is a clone of Max Fashion with it's simple and eye-cathcing UI."
@@ -192,6 +216,7 @@ const Projects = () => {
           <Card
             img={"https://i.postimg.cc/tg2Tm9Kp/cr.jpg"}
             tag={["Collaborative", "E-Commerce"]}
+            tsTags = {["HTML", "CSS", "JavaScript", "ES-6", "LocalStorage"]}
             heading={"Croma Clone"}
             content={"My first Collaborative which demanded ultimate struggle."}
             deploy={"https://stellar-crisp-f229d2.netlify.app/"}
@@ -202,6 +227,7 @@ const Projects = () => {
           <Card
             img={"https://i.postimg.cc/RhfJYj1d/ie.jpg"}
             tag={["Collaborative", "News"]}
+            tsTags = {["React", "CSS", "REST-API"]}
             heading={"Indian Express Clone"}
             content={
               "First collaborative project on React-Js, which came with a lot of challenges."
@@ -214,6 +240,7 @@ const Projects = () => {
           <Card
             img={"https://i.postimg.cc/Rhcqdw9b/mb.jpg"}
             tag={["Solo", "E-Commerce"]}
+            tsTags = {["HTML", "CSS", "JavaScript", "ES-6"]}
             heading={"Movie Booking Application"}
             content={
               "Simple yet one of the Solo project that has a lot of logics included."

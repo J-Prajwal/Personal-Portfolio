@@ -1,5 +1,5 @@
 ::-webkit-scrollbar {
-  width: 4px;
+  width: 5px;
 }
 
 ::-webkit-scrollbar-track {
@@ -8,10 +8,10 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: grey;
+  background: skyblue;
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(92, 91, 91);
+  background: skyblue;
 }
