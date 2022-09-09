@@ -56,12 +56,7 @@ export default function About() {
             </Text>
           </Heading>
           <Text fontSize={{ base: "md", lg: "lg" }} color={"gray.500"}>
-            <Typed
-              strings={[
-                "A passionate full-stack web developer, who loves to buid cool projects and work in a team. I want to achieve global recognition and exposure with my skillset, toolset and mindset.",
-              ]}
-              typeSpeed={30}
-            ></Typed>
+          A passionate full-stack web developer, who loves to buid cool projects and work in a team. I want to achieve global recognition and exposure with my skillset, toolset and mindset.
           </Text>
           <Stack direction={{ base: "column", md: "row" }} spacing={4}>
             <Button
