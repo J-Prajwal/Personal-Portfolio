@@ -9,13 +9,19 @@ import {
   useBreakpointValue,
 } from "@chakra-ui/react";
 import { BsLinkedin, BsGithub, BsTwitter } from "react-icons/bs";
-import { motion } from "framer-motion"; 
+import Typed from "react-typed";
+import ReactTyped from "react-typed";
 
 export default function About() {
   return (
-    <Stack minH={"100vh"} direction={{ base: "column", md: "row" }} pt={10} id="About">
+    <Stack
+      minH={"100vh"}
+      direction={{ base: "column", md: "row" }}
+      pt={10}
+      id="About"
+    >
       <Flex p={8} flex={1} align={"center"} justify={"center"}>
-        <Stack spacing={6} w={"full"} maxW={"lg"}>
+        <Stack spacing={6} w={"full"} maxW={"xl"}>
           <Heading fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}>
             <Text
               as={"span"}
@@ -35,13 +41,27 @@ export default function About() {
             </Text>
             <br />
             <Text color={"blue.400"} as={"span"}>
-              PRAJWAL JAISWAL
+              <Typed
+                strings={[
+                  "Prajwal Jaiswal",
+                  "A Full-Stack Developer",
+                  "A Tech-Enthusiast",
+                  "An Entrepreneur",
+                  "A Graphic-Designer"
+                ]}
+                typeSpeed={150}
+                backSpeed={100}
+                loop
+              ></Typed>
             </Text>
           </Heading>
           <Text fontSize={{ base: "md", lg: "lg" }} color={"gray.500"}>
-            A passionate full-stack web developer, who loves to buid cool
-            projects and work in a team. I want to achieve global recognition
-            and exposure with my skillset, toolset and mindset.
+            <Typed
+              strings={[
+                "A passionate full-stack web developer, who loves to buid cool projects and work in a team. I want to achieve global recognition and exposure with my skillset, toolset and mindset.",
+              ]}
+              typeSpeed={30}
+            ></Typed>
           </Text>
           <Stack direction={{ base: "column", md: "row" }} spacing={4}>
             <Button

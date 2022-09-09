@@ -21,7 +21,7 @@ import { BsGithub, BsLink45Deg } from "react-icons/bs";
 
 const BlogTags = (props) => {
   return (
-    <HStack spacing={2} marginTop={props.marginTop}>
+    <HStack spacing={2} marginTop={props.marginTop} cursor="pointer">
       {props.tags.map((tag) => {
         return (
           <Tag
@@ -41,7 +41,7 @@ const BlogTags = (props) => {
 
 const TechStackTags = (props) => {
   return (
-    <Flex flexWrap={"wrap"} gap={2} marginTop={props.marginTop}>
+    <Flex flexWrap={"wrap"} gap={2} marginTop={props.marginTop} cursor="pointer">
       {props.tags.map((tag) => {
         return (
           <Tag
@@ -107,6 +107,7 @@ const Projects = () => {
               href={"https://classy-druid-0cbd3c.netlify.app/"}
             >
               <Image
+              className="zoom"
                 borderRadius="lg"
                 src={
                   "https://i.postimg.cc/MThSq0H8/Annotation-2022-09-08-203636.jpg"

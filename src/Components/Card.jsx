@@ -69,14 +69,15 @@ export default function Card({
       <Box
         maxW={"445px"}
         w={"full"}
-        h={"xl"}
+        h={[, "xl"]}
         bg={useColorModeValue("white", "gray.900")}
         boxShadow={"2xl"}
         rounded={"md"}
         p={6}
         overflow={"hidden"}
-      >
+        >
         <Box
+        className="cardZoom"
           h={["160px", "210px"]}
           bg={"gray.100"}
           mt={-6}
