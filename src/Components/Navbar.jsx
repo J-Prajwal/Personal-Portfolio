@@ -17,14 +17,7 @@ import {
   Stack,
   Icon,
 } from "@chakra-ui/react";
-import {
-  MoonIcon,
-  SunIcon,
-  HamburgerIcon,
-  CloseIcon,
-  EmailIcon,
-} from "@chakra-ui/icons";
-import { BsLinkedin, BsGithub, BsTwitter } from "react-icons/bs";
+import { MoonIcon, SunIcon, HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { Link } from "react-scroll";
 
 const Links = ["About", "Skills", "Experience", "Projects", "Testimonials"];
@@ -72,7 +65,27 @@ export default function Navbar() {
           />
           <HStack spacing={8} alignItems={"center"}>
             <Box>
-              <Heading size={"lg"}>Prajwal</Heading>
+              <Heading size={"lg"}>
+                <Link
+                  style={{ cursor: "pointer" }}
+                  px={2}
+                  py={1}
+                  rounded={"md"}
+                  _hover={{
+                    textDecoration: "none",
+                    bg: useColorModeValue("gray.200", "gray.700"),
+                  }}
+                  activeClass="active"
+                  to={"About"}
+                  spy={true}
+                  smooth={true}
+                  offset={-100}
+                  duration={500}
+                >
+                  {" "}
+                  Prajwal{" "}
+                </Link>
+              </Heading>
             </Box>
             <HStack
               as={"nav"}

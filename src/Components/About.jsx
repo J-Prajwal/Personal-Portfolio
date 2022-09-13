@@ -7,12 +7,13 @@ import {
   Link,
   Text,
   useBreakpointValue,
+  useColorMode,
 } from "@chakra-ui/react";
 import { BsLinkedin, BsGithub, BsTwitter } from "react-icons/bs";
 import Typed from "react-typed";
-import ReactTyped from "react-typed";
 
 export default function About() {
+  const { colorMode, toggleColorMode } = useColorMode();
   return (
     <Stack
       minH={"100vh"}
@@ -47,7 +48,7 @@ export default function About() {
                   "A Full-Stack Developer",
                   "A Tech-Enthusiast",
                   "An Entrepreneur",
-                  "A Graphic-Designer"
+                  "A Graphic-Designer",
                 ]}
                 typeSpeed={150}
                 backSpeed={100}
@@ -56,7 +57,9 @@ export default function About() {
             </Text>
           </Heading>
           <Text fontSize={{ base: "md", lg: "lg" }} color={"gray.500"}>
-          A passionate full-stack web developer, who loves to buid cool projects and work in a team. I want to achieve global recognition and exposure with my skillset, toolset and mindset.
+            A passionate full-stack web developer, who loves to buid cool
+            projects and work in a team. I want to achieve global recognition
+            and exposure with my skillset, toolset and mindset.
           </Text>
           <Stack direction={{ base: "column", md: "row" }} spacing={4}>
             <Button
@@ -108,13 +111,22 @@ export default function About() {
         </Stack>
       </Flex>
       <Flex flex={1}>
-        <Image
-          alt={"Login Image"}
-          objectFit={"cover"}
-          src={
-            "https://i.postimg.cc/vmndQTJG/Whats-App-Image-2022-08-06-at-2-52-05-PM-removebg-preview-1.png"
-          }
-        />
+        {colorMode == "dark" ? (
+          <Image
+            objectFit={"cover"}
+            src={
+              "https://i.postimg.cc/65JCvyNM/Light-Blue-and-Ivory-Soft-Gradient-UI-Reminder-Search-Personal-Instagram-Post-1.jpg"
+            }
+          />
+        ) : (
+          <Image
+            alt={"Login Image"}
+            objectFit={"cover"}
+            src={
+              "https://i.postimg.cc/pXhGCNwT/Light-Blue-and-Ivory-Soft-Gradient-UI-Reminder-Search-Personal-Instagram-Post.jpg"
+            }
+          />
+        )}
       </Flex>
     </Stack>
   );
