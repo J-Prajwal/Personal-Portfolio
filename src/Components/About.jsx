@@ -110,10 +110,13 @@ export default function About() {
           </Stack>
         </Stack>
       </Flex>
-      <Flex flex={1}>
+      <Flex flex={1} alignItems="center" justifyContent={"center"}>
         {colorMode == "dark" ? (
           <Image
             objectFit={"cover"}
+            className="zoom"
+            width={["xs", "lg"]}
+            height={["xs", "lg"]}
             src={
               "https://i.postimg.cc/65JCvyNM/Light-Blue-and-Ivory-Soft-Gradient-UI-Reminder-Search-Personal-Instagram-Post-1.jpg"
             }
@@ -121,7 +124,10 @@ export default function About() {
         ) : (
           <Image
             alt={"Login Image"}
+            className="zoom"
             objectFit={"cover"}
+            width={["xs", "lg"]}
+            height={["xs", "lg"]}
             src={
               "https://i.postimg.cc/pXhGCNwT/Light-Blue-and-Ivory-Soft-Gradient-UI-Reminder-Search-Personal-Instagram-Post.jpg"
             }
