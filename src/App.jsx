@@ -8,6 +8,7 @@ import Projects from "./Components/Projects";
 import Testimonials from "./Components/Testimonials";
 import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
+import GitCalendar from "./Components/GitCalendar";
 
 function App() {
   document.addEventListener("contextmenu", (event) => {
@@ -21,6 +22,7 @@ function App() {
       <Skills />
       <Experience />
       <Projects />
+      <GitCalendar />
       <Testimonials />
       <Contact />
       <Footer />

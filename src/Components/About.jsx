@@ -13,6 +13,18 @@ import { BsLinkedin, BsGithub, BsTwitter } from "react-icons/bs";
 import Typed from "react-typed";
 
 export default function About() {
+  const handleResume = () => {
+    fetch("Prajwal.pdf").then((res) => {
+      res.blob().then((blob) => {
+        const fileUrl = window.URL.createObjectURL(blob);
+        // create an object for the file.
+        let file = document.createElement("a");
+        file.href = fileUrl;
+        file.download = "Prajwal.pdf";
+        file.click();
+      });
+    });
+  };
   const { colorMode, toggleColorMode } = useColorMode();
   return (
     <Stack
@@ -69,14 +81,15 @@ export default function About() {
               _hover={{
                 bg: "blue.500",
               }}
+              onClick={handleResume}
             >
-              <Link
+              {/* <Link
                 style={{ textDecoration: "none" }}
                 href="https://drive.google.com/drive/folders/1-TBHBQjmB1ygTTIPgF7I3PNFT8g0qtxX?usp=sharing"
                 target={"_blank"}
-              >
-                My Resume
-              </Link>
+              > */}
+              My Resume
+              {/* </Link> */}
             </Button>
             <Button rounded={"full"}>
               <Link
