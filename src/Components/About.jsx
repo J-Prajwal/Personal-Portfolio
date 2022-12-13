@@ -17,7 +17,6 @@ export default function About() {
     fetch("Prajwal.pdf").then((res) => {
       res.blob().then((blob) => {
         const fileUrl = window.URL.createObjectURL(blob);
-        // create an object for the file.
         let file = document.createElement("a");
         file.href = fileUrl;
         file.download = "Prajwal.pdf";
@@ -32,7 +31,7 @@ export default function About() {
       direction={{ base: "column", md: "row" }}
       pt={10}
       id="About"
-    >
+    >an
       <Flex p={8} flex={1} align={"center"} justify={"center"}>
         <Stack spacing={6} w={"full"} maxW={"xl"}>
           <Heading fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}>
@@ -50,20 +49,30 @@ export default function About() {
                 zIndex: -1,
               }}
             >
-              Hi, I Am
+              Hi, I Am 
             </Text>
             <br />
-            <Text color={"blue.400"} as={"span"}>
+            <Text
+              as={"span"}
+              size={{base: "md", md: "lg"}}
+              position={"relative"}
+              fontFamily={"calibri"}
+              color={"blue.400"}
+            >
+              {" "}Prajwal Jaiswal
+            </Text>
+            <br />
+            <Text color={"blue.500"} as={"span"}>
               <Typed
                 strings={[
-                  "Prajwal Jaiswal",
                   "A Full-Stack Developer",
                   "A Tech-Enthusiast",
                   "An Entrepreneur",
                   "A Graphic-Designer",
+                  "An Active Communist"
                 ]}
                 typeSpeed={150}
-                backSpeed={100}
+                backSpeed={25}
                 loop
               ></Typed>
             </Text>
@@ -83,13 +92,7 @@ export default function About() {
               }}
               onClick={handleResume}
             >
-              {/* <Link
-                style={{ textDecoration: "none" }}
-                href="https://drive.google.com/drive/folders/1-TBHBQjmB1ygTTIPgF7I3PNFT8g0qtxX?usp=sharing"
-                target={"_blank"}
-              > */}
               My Resume
-              {/* </Link> */}
             </Button>
             <Button rounded={"full"}>
               <Link
